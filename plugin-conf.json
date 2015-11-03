@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    {
+      "plugin": "mesosphere.marathon.plugin.auth.Authorizer",
+      "implementation": "tech.allegro.marathon.plugin.auth.ShiroAuthorizer"
+    },
+    {
+      "plugin": "mesosphere.marathon.plugin.auth.Authenticator",
+      "implementation": "tech.allegro.marathon.plugin.auth.ShiroAuthenticator",
+      "configuration": {
+        "path": "/etc/marathon/shiro.ini"
+      }
+    }
+  ]
+}
